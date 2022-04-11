@@ -48,7 +48,8 @@ grant all privileges on *.* to 'jeferson'@'localhost' with grant option;
 DROP USER 'username'@'localhost';
 
 -- CREATE TABLE
-CREATE TABLE fatec_aluno (
+CREATE TABLE alunos (
+      id_aluno int PRIMARY KEY AUTO_INCREMENT,  
       situacao char (7),
       sexo char (1),
       data_matricula date,
@@ -117,3 +118,6 @@ UPDATE fatec_aluno SET ra = '340' WHERE nome = 'Dayane';
 -- DELETE
 
 DELETE FROM fatec_aluno WHERE ra = 300;
+
+--CRIAR PK - SIMPLES
+ALTER TABLE fatec_aluno add column id_aluno int PRIMARY KEY AUTO_INCREMENT;
